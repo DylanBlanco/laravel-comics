@@ -1,39 +1,19 @@
-@php
-    $links = [
-        [
-            'url' => '/',
-            'label' => 'Home',
-            'active' => true,
-        ],
-        [
-            'url' => '/chi-siamo',
-            'label' => 'Chi siamo',
-            'active' => true,
-        ],
-        [
-            'url' => '/contatti',
-            'label' => 'Contatti',
-            'active' => false,
-        ],
-    ];
-@endphp
-
 <header>
-    <nav>
-        <ul>
-            @foreach ($links as $link)
+    <div class="row">
+        <div class="col-2">
+            <figure>
+                <img src="{{ Vite::asset('resources/images/dc-logo.png') }}" alt="Logo" width="50">
+            </figure>
+        </div>
+
+        <div class="col-10">
+            <ul>
+                @foreach ($menuLinks as $element)
                 <li>
-                    @if ($link['active'])
-                        <a href="{{ $link['url'] }}">
-                            {{ $link['label'] }}
-                        </a>
-                    @else
-                        <del>
-                            {{ $link['label'] }}
-                        </del>
-                    @endif
+                    <a href="#"> {{ $element['name'] }} </a>
                 </li>
-            @endforeach
-        </ul>
-    </nav>
+                @endforeach
+            </ul>
+        </div>
+    </div>
 </header>
