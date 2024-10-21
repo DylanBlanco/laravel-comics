@@ -24,5 +24,22 @@
                 @endforeach
             </div>
         </div>
+
+        <div>
+            <div class="row">
+                <ul>
+                    @foreach ($itemsMenu as $item)
+                        <li>
+                            <figure>
+                                <img src=" {{ Vite::asset('resources/images/' . $item['image']) }} " alt="">
+                            </figure>
+                            <span>
+                                {{ $item['name'] }}
+                            </span>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
     </main>
 @endsection

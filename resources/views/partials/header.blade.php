@@ -1,12 +1,12 @@
 <header>
     <div class="row">
-        <div class="col-2">
+        <div class="col">
             <figure>
                 <img src="{{ Vite::asset('resources/images/dc-logo.png') }}" alt="Logo" width="50">
             </figure>
         </div>
 
-        <div class="col-10">
+        <div class="col">
             <ul>
                 @foreach ($menuLinks as $element)
                 <li>
