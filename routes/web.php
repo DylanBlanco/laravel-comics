@@ -192,6 +192,7 @@ Route::get('/', function () {
         ],
     ];
 
+    $comics = config('comics');
     /*
         compact: crea un array associativo le cui chiavi sono le stringhe
                  che mettiamo tra le parentesi, mentre i valori di tali
@@ -218,7 +219,7 @@ Route::get('/', function () {
     //     'firstName' => $firstName,
     //     'lastName' => $lastName,
     // ]);
-    return view('pages.welcome', compact('menuLinks', 'itemsMenu', 'footerLinksDcComics', 'footerLinksDc', 'footerLinksSites', 'footerLinksShop'));
+    return view('pages.welcome', compact('comics', 'menuLinks', 'itemsMenu', 'footerLinksDcComics', 'footerLinksDc', 'footerLinksSites', 'footerLinksShop'));
 
     // return view('welcome', compact('firstName', 'lastName'));
 })->name('homePage');
