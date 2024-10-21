@@ -14,7 +14,7 @@
                 @foreach ($comics as $element)
                     <div class="col">
                         <figure>
-                            <img src=" {{ $element['thumb'] }} " alt=" {{ $element['title'] }} ">
+                            <img src=" {{ $element['thumb'] }} " alt=" {{ $element['title'] }} " width="250">
                         </figure>
 
                         <h4>
