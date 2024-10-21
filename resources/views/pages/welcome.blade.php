@@ -31,7 +31,7 @@
                     @foreach ($itemsMenu as $item)
                         <li>
                             <figure>
-                                <img src=" {{ Vite::asset('resources/images/' . $item['image']) }} " alt="">
+                                <img src=" {{ Vite::asset('resources/images/' . $item['image']) }} " alt="" width="100">
                             </figure>
                             <span>
                                 {{ $item['name'] }}
